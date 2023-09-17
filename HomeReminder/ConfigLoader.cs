@@ -30,18 +30,50 @@
                     {
                         new MessageByTime
                         {
-                            messageText = "Cook Dinner",
-                            Time = "17:15"
+                            messageText = "Internet is going down soon",
+                            Time = "22:40"
                         },
+                    }
+                },
+                new Config()
+                {
+                    SpecificDates = Array.Empty<DateOnly>(),
+                    DayOfWeeks = new DayOfWeek[]
+                    {
+                        DayOfWeek.Saturday, DayOfWeek.Sunday, DayOfWeek.Tuesday
+                    },
+                    Messages = new MessageByTime[]
+                    {
                         new MessageByTime
                         {
                             messageText = "Internet is going down soon",
-                            Time = "23:40"
+                            Time = "22:20"
                         },
                         new MessageByTime
                         {
-                            messageText = "13:00",
-                            Time = "13:00"
+                            messageText = "Jogging",
+                            Time = "16:45"
+                        }
+                    }
+                },
+                new Config()
+                {
+                    SpecificDates = Array.Empty<DateOnly>(),
+                    DayOfWeeks = new DayOfWeek[]
+                    {
+                        DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday
+                    },
+                    Messages = new MessageByTime[]
+                    {
+                        new MessageByTime
+                        {
+                            messageText = "Cook Dinner",
+                            Time = "17:20"
+                        },
+                        new MessageByTime
+                        {
+                            messageText = "Fruit and Lunch box",
+                            Time = "20:50"
                         }
                     }
                 }
