@@ -48,11 +48,6 @@
                         {
                             messageText = "Internet is going down soon",
                             Time = "22:20"
-                        },
-                        new MessageByTime
-                        {
-                            messageText = "Jogging",
-                            Time = "16:45"
                         }
                     }
                 },
@@ -73,7 +68,23 @@
                         new MessageByTime
                         {
                             messageText = "Fruit and Lunch box",
-                            Time = "20:50"
+                            Time = "21:00"
+                        }
+                    }
+                },
+                new Config()
+                {
+                    SpecificDates = Array.Empty<DateOnly>(),
+                    DayOfWeeks = new DayOfWeek[]
+                    {
+                        DayOfWeek.Sunday
+                    },
+                    Messages = new MessageByTime[]
+                    {
+                        new MessageByTime
+                        {
+                            messageText = "Lesson Done. Dinner Or Fruit",
+                            Time = "21:10"
                         }
                     }
                 }
