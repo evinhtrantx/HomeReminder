@@ -37,6 +37,11 @@
                         {
                             messageText = "Internet is going down soon",
                             Time = "23:40"
+                        },
+                        new MessageByTime
+                        {
+                            messageText = "13:00",
+                            Time = "13:00"
                         }
                     }
                 }

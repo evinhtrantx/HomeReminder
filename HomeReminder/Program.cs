@@ -26,6 +26,12 @@ foreach (var schedule in schedules)
         }
     }
 }
+var dismissSnoozeActions = new ToastActionsSnoozeAndDismiss();
+var msg1 = new ToastContentBuilder()
+    .AddText("alerts have been setup for today")
+    .SetToastScenario(ToastScenario.Alarm);
+msg1.Content.Actions = dismissSnoozeActions;
+msg1.Show();
 
 
 void ScheduleMessage(MessageByTime[] messages)
