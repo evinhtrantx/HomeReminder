@@ -14,9 +14,9 @@
 
     }
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-    public class ConfigLoader
+    public class PredefinedConfigLoader : IConfigLoader
     {
-        public static IList<Config> GetConfigs() {
+        public IList<Config> GetConfigs() {
 
             List<Config> result = new() {
                 new Config()
@@ -24,30 +24,24 @@
                     SpecificDates = Array.Empty<DateOnly>(),
                     DayOfWeeks = new DayOfWeek[]
                     {
-                        DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday
+                        DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday
                     },
                     Messages = new MessageByTime[]
                     {
                         new MessageByTime
                         {
-                            messageText = "Internet is going down soon",
-                            Time = "22:40"
+                            messageText = "Cook Dinner",
+                            Time = "17:20"
                         },
-                    }
-                },
-                new Config()
-                {
-                    SpecificDates = Array.Empty<DateOnly>(),
-                    DayOfWeeks = new DayOfWeek[]
-                    {
-                        DayOfWeek.Saturday, DayOfWeek.Sunday, DayOfWeek.Tuesday
-                    },
-                    Messages = new MessageByTime[]
-                    {
                         new MessageByTime
                         {
                             messageText = "Internet is going down soon",
                             Time = "22:20"
+                        },
+                        new MessageByTime
+                        {
+                            messageText = "Internet is going down soon",
+                            Time = "22:40"
                         }
                     }
                 },
@@ -60,11 +54,6 @@
                     },
                     Messages = new MessageByTime[]
                     {
-                        new MessageByTime
-                        {
-                            messageText = "Cook Dinner",
-                            Time = "17:20"
-                        },
                         new MessageByTime
                         {
                             messageText = "Fruit and Lunch box",
@@ -84,13 +73,18 @@
                         new MessageByTime
                         {
                             messageText = "Lesson Done. Dinner Or Fruit",
-                            Time = "21:10"
+                            Time = "21:05"
                         }
                     }
                 }
             };
             
             return result;
+        }
+
+        public void LoadConfig()
+        {
+            throw new NotImplementedException();
         }
     }
 }
